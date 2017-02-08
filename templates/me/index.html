@@ -107,12 +107,16 @@
             });
         }
 
-         $(window).load(function() {
+        $(window).load(function() {
             setTimeout(slabTextHeadlines, 0);
         });
 
         $(document).ready(function(){
             $("a[rel^='prettyPhoto']").prettyPhoto();
+            // Force to use https.
+            if (location.protocol != "https:") {
+            	location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+            }
         });
     </script>
 
