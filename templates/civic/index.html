@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Adiyat Mubarak</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Civic - CV Resume">
+	<meta name="keywords" content="resume, civic, onepage, adiyatmubarak, keda87">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->   
+	<link href="{{ url_for('static', filename='img/favicon.ico') }}" rel="shortcut icon"/>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i,700" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/flaticon.css') }}"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.css') }}"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+
+
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66068786-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-66068786-2');
+    </script>
+
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Hero section start -->
+	<section class="hero-section spad">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-10 offset-xl-1">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="hero-text">
+								<h2>Adiyat Mubarak</h2>
+								<p>{{ experience }} years experienced software engineer in industry, in love with nature and cycling.</p>
+							</div>
+							<div class="hero-info">
+								<h2>General Info</h2>
+								<ul>
+									<li><span>Location</span>Jakarta, Indonesia</li>
+									<li><span>E-mail</span>adiyatmubarak@gmail.com</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<figure class="hero-image">
+								<img src="{{ url_for('static', filename='img/prof-s.png') }}" alt="5">
+							</figure>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Hero section end -->
+
+	<!-- Social links section start -->
+	<div class="social-section">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-10 offset-xl-1">
+					<div class="social-link-warp">
+						<div class="social-links">
+							<a target="_blank" href="https://www.linkedin.com/in/adiyatmubarak/"><i class="fa fa-linkedin"></i></a>
+							<a target="_blank" href="https://www.instagram.com/adiyatmubarak/"><i class="fa fa-instagram"></i></a>
+							<a target="_blank" href="https://twitter.com/adiyatmubarak"><i class="fa fa-twitter"></i></a>
+							<a target="_blank" href="https://stackoverflow.com/users/1936697/adiyat-mubarak"><i class="fa fa-stack-overflow"></i></a>
+                            <a target="_blank" href="https://github.com/keda87"><i class="fa fa-github"></i></a>
+                            <a target="_blank" href="https://adiyatmubarak.wordpress.com"><i class="fa fa-wordpress"></i></a>
+						</div>
+						<h2 class="hidden-md hidden-sm">My Social Profiles</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<!-- Social links section end -->
+
+	<!-- Resume section start -->
+	<section class="resume-section spad">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-7 offset-xl-2">
+					<div class="section-title">
+						<h2>Work Experience</h2>
+					</div>
+					<ul class="resume-list">
+                        {% for exp in list_experience %}
+                            <li>
+                                <h3>{{ exp.company }}</h3>
+                                <h4>{{ exp.role }}, {{ exp.year_info }}</h4>
+                                <p>{{ exp.description }}</p>
+                            </li>
+                        {% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Resume section end -->
+
+	<!-- Footer section start -->
+	<footer class="footer-section">
+		<div class="container text-center">
+			<div class="copyright">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </div>
+		</div>
+	</footer>
+	<!-- Footer section end -->
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="{{ url_for('static', filename='js/jquery-2.1.4.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/magnific-popup.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/circle-progress.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
