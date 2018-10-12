@@ -1,0 +1,18 @@
+version: '3'
+services:
+  server:
+    restart: always
+    image: nginx
+    volumes:
+    - ./conf:/etc/nginx/conf.d
+    - ./static:/static
+    links:
+    - web:web
+    ports:
+    - "80:80"
+  web:
+    build: .
+    expose:
+    - "5000"
+    command: gunicorn app:app -b :5000 --name app --log-level=debug --log-file=-
+
