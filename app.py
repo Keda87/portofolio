@@ -11,10 +11,22 @@ def index():
     experience = int(experience / 360)
     list_experience = [
         {
-            'year_info': 'Mar 2017-Present',
+            'year_info': 'Mar 2019-Present',
+            'company': 'Tanihub',
+            'role': 'Software Engineer',
+            'description': ('Having fun with Go, NodeJS and React')
+        },
+        {
+            'year_info': 'Mar 2017-Mar 2019',
             'company': '88Spares.com',
             'role': 'Backend Engineer',
-            'description': 'Building backend services with python.',
+            'description': ('- Building web API\n'
+                            '- Improve and refactor the current codebase.\n'
+                            '- Implement automated testing from the legacy project that had 0 coverage into around 70% coverage.\n'
+                            '- Building several support services API such us (notification, shipping, payment, logging)\n'
+                            '- Managing pull request and staging deployment\n'
+                            '- Managing sentry and distributing bug ticket\n'
+                            '- Currently, extract current monolith architecture into microservices.')
         },
         {
             'year_info': 'Jan 2016-Feb 2017',
